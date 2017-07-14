@@ -32,7 +32,9 @@ namespace ChookBook.Api
             {
                 app.UseExceptionHandler();
             }
-            
+
+            app.UseStatusCodePages();
+
             app.UseMvc();
         }
     }

@@ -1,10 +1,12 @@
-﻿using System.Reflection.Metadata;
+﻿using System;
+using System.Reflection.Metadata;
 using ChookBook.Domain.Enums;
 
 namespace ChookBook.Domain
 {
     public class Breed
     {
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public bool ColdHardy { get; set; }
