@@ -9,7 +9,7 @@ namespace ChookBook.Repository
 {
     public class BreedRepository : IBreedRepository
     {
-        private readonly ICollection<Breed> breeds;
+        private IList<Breed> breeds;
 
         public BreedRepository()
         {
@@ -28,14 +28,17 @@ namespace ChookBook.Repository
 
         private void LoadBreeds()
         {
+            this.breeds = new List<Breed>();
+
             var breed = new Breed
             {
                 Id = new Guid("4CBD24D28BB148F7BB83C6E23F84BBA7"),
+                Type = BirdType.Chicken,
                 Name = "Sussex",
                 ColdHardy = true,
                 ImageFileName = "Sussex.png",
-                Type = BirdType.Chicken,
-                Description = "Nice bird.",
+                Url = "https://en.wikipedia.org/wiki/Sussex_chicken",
+                Description = "The Sussex chicken is a dual purpose breed of chicken that originated in England around the time of the Roman conquest of Britain that is a popular garden chicken in many countries.They come in eight colours(with a couple more being developed) and have a bantam version at 1/4 size; the bantams may be any of the eight colours.",
                 Notes = new Collection<Note>(),
                 EggFacts = new EggFacts
                 {
@@ -46,8 +49,6 @@ namespace ChookBook.Repository
             };
 
             this.breeds.Add(breed);
-
-
         }
     }
 }

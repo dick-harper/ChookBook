@@ -14,6 +14,7 @@ namespace ChookBook.Domain
         public EggFacts EggFacts{ get; set; }
         public BirdType Type { get; set; }
         public string ImageFileName { get; set; }
+        public string Url { get; set; }
         public ICollection<Note> Notes { get; set; }
     }
 }
