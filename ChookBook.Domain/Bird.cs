@@ -11,6 +11,7 @@ namespace ChookBook.Domain
         public Breed Breed { get; set; }
         public string NickName { get; set; }
         public string ImageFileName { get; set; }
-        public IList<WeightInfo> Weights { get; set; }
+        public IList<WeightInfo> Weights { get; set; } = new List<WeightInfo>();
+        public ICollection<Note> Notes { get; set; }
     }
 }

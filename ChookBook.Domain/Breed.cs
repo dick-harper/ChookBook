@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection.Metadata;
 using ChookBook.Domain.Enums;
 
@@ -13,5 +14,6 @@ namespace ChookBook.Domain
         public EggFacts EggFacts{ get; set; }
         public BirdType Type { get; set; }
         public string ImageFileName { get; set; }
+        public ICollection<Note> Notes { get; set; }
     }
 }
