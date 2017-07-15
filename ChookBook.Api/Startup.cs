@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 
 namespace ChookBook.Api
 {
@@ -17,6 +18,18 @@ namespace ChookBook.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+                //.AddJsonOptions(x =>
+                //{
+                //    if (x.SerializerSettings.ContractResolver != null)
+                //    {
+                //        var resolver = x.SerializerSettings.ContractResolver
+                //            as DefaultContractResolver;
+
+                //        resolver.NamingStrategy = null;
+                //    }
+                //}
+            //);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

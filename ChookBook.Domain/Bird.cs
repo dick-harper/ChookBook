@@ -13,5 +13,6 @@ namespace ChookBook.Domain
         public string ImageFileName { get; set; }
         public IList<WeightInfo> Weights { get; set; } = new List<WeightInfo>();
         public ICollection<Note> Notes { get; set; }
+        public BirdSize Size { get; set; }
     }
 }

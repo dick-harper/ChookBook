@@ -16,5 +16,6 @@ namespace ChookBook.Domain
         public string ImageFileName { get; set; }
         public string Url { get; set; }
         public ICollection<Note> Notes { get; set; }
+        
     }
 }

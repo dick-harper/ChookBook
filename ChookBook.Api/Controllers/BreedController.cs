@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using ChookBook.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,6 +32,39 @@ namespace ChookBook.Api.Controllers
             }
 
             return Ok(breed);
+        }
+
+        [HttpGet("{breedId}/notes")]
+        public IActionResult GetNotes(Guid breedId)
+        {
+            var breed = this.breedRepository.GetBreed(breedId);
+
+            if (breed == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(breed.Notes);
+        }
+
+        [HttpGet("{breedId}/notes/{id}")]
+        public IActionResult GetNote(Guid breedId, Guid id)
+        {
+            var breed = this.breedRepository.GetBreed(breedId);
+
+            if (breed == null)
+            {
+                return NotFound();
+            }
+
+            var note = breed.Notes.FirstOrDefault(x => x.Id == id);
+
+            if (note == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(note);
         }
     }
 }
