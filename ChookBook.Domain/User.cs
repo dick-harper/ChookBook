@@ -9,6 +9,7 @@ namespace ChookBook.Domain
         public string LoginId { get; set; }
         public string FirsName { get; set; }
         public string LastName { get; set; }
+        public string HashedPasswork { get; set; }
         public DateTime CreateDate { get; set; }
     }
 }

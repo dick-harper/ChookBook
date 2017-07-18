@@ -1,13 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChookBook.Api", "ChookBook.Api\ChookBook.Api.csproj", "{F3190C89-7441-42B4-BB26-EDF2340476BE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChookBook.Domain", "ChookBook.Domain\ChookBook.Domain.csproj", "{4F5FD427-F039-40C6-AB11-F37A62668A8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChookBook.Repository", "ChookBook.Repository\ChookBook.Repository.csproj", "{C3F21182-8D02-4262-A69D-748F0AC248E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChookBook.Repository", "ChookBook.Repository\ChookBook.Repository.csproj", "{C3F21182-8D02-4262-A69D-748F0AC248E4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChookBook.Services", "ChookBook.Services\ChookBook.Services.csproj", "{438B488C-26DB-433D-9067-E041C7EB86E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChookBook.Web", "ChookBook.Web\ChookBook.Web.csproj", "{3845CD36-6E12-4DF8-8F28-C0732CF1AB3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{C3F21182-8D02-4262-A69D-748F0AC248E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3F21182-8D02-4262-A69D-748F0AC248E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3F21182-8D02-4262-A69D-748F0AC248E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{438B488C-26DB-433D-9067-E041C7EB86E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{438B488C-26DB-433D-9067-E041C7EB86E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{438B488C-26DB-433D-9067-E041C7EB86E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{438B488C-26DB-433D-9067-E041C7EB86E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3845CD36-6E12-4DF8-8F28-C0732CF1AB3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3845CD36-6E12-4DF8-8F28-C0732CF1AB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3845CD36-6E12-4DF8-8F28-C0732CF1AB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3845CD36-6E12-4DF8-8F28-C0732CF1AB3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

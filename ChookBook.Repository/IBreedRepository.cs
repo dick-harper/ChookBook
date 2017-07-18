@@ -9,5 +9,7 @@ namespace ChookBook.Repository
         ICollection<Breed> GetBreeds();
 
         Breed GetBreed(Guid id);
+
+        bool BreedExists(string name);
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace ChookBook.Domain.Enums
+﻿namespace ChookBook.Domain.Enums.Poultry
 {
     public enum BirdType
     {

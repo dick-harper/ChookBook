@@ -1,4 +1,5 @@
 ﻿using ChookBook.Domain.Enums;
+using ChookBook.Domain.Enums.Poultry;
 
 namespace ChookBook.Domain
 {

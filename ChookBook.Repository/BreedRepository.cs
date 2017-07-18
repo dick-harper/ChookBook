@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using ChookBook.Domain;
 using ChookBook.Domain.Enums;
+using ChookBook.Domain.Enums.Poultry;
 
 namespace ChookBook.Repository
 {
@@ -25,6 +26,11 @@ namespace ChookBook.Repository
         public Breed GetBreed(Guid id)
         {
             return breeds.FirstOrDefault(x => x.Id == id);
+        }
+
+        public bool BreedExists(string name)
+        {
+            return breeds.Any(x => x.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
         }
 
         private void LoadBreeds()

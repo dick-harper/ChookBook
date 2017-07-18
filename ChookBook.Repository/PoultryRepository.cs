@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using ChookBook.Domain;
 using ChookBook.Domain.Enums;
+using ChookBook.Domain.Enums.Poultry;
 
 namespace ChookBook.Repository
 {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection.Metadata;
 using ChookBook.Domain.Enums;
+using ChookBook.Domain.Enums.Poultry;
 
 namespace ChookBook.Domain
 {

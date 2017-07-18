@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using ChookBook.Api.Models;
 using ChookBook.Repository;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,37 +35,36 @@ namespace ChookBook.Api.Controllers
             return Ok(breed);
         }
 
-        [HttpGet("{breedId}/notes")]
-        public IActionResult GetNotes(Guid breedId)
+        //[HttpGet("{breedId}/notes")]
+        //public IActionResult GetNotes(Guid breedId)
+        //{
+        //    var breed = this.breedRepository.GetBreed(breedId);
+
+        //    if (breed == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    return Ok(breed.Notes);
+        //}
+
+        [HttpPost]
+        public IActionResult CreateBreed([FromBody] BreedForCreationDto breedForCreation)
         {
-            var breed = this.breedRepository.GetBreed(breedId);
-
-            if (breed == null)
+            if (breedForCreation == null || this.breedRepository.BreedExists(breedForCreation.Name))
             {
-                return NotFound();
+                return BadRequest();
             }
+            
+            // TODO implement auto mapping
+            //var breedDto = new BreedDto
+            //{
+            //    Id = Guid.NewGuid(),
+            //    ColdHardy = 
+                
+            //}; 
 
-            return Ok(breed.Notes);
-        }
-
-        [HttpGet("{breedId}/notes/{id}")]
-        public IActionResult GetNote(Guid breedId, Guid id)
-        {
-            var breed = this.breedRepository.GetBreed(breedId);
-
-            if (breed == null)
-            {
-                return NotFound();
-            }
-
-            var note = breed.Notes.FirstOrDefault(x => x.Id == id);
-
-            if (note == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(note);
+            return null;
         }
     }
 }
